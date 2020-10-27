@@ -1,0 +1,38 @@
+header 
+{
+    margin:0;
+    background: linear-gradient(180deg,#222222, grey);
+}
+@media screen and (min-width:992px)
+{
+    header h1
+{
+   animation: letraXletra 1.5s 1 linear;
+   overflow: hidden;
+   white-space: nowrap;
+}
+header h6
+{
+    animation: opacidad 1.5s 1 linear 1.5s both;
+}
+@keyframes letraXletra 
+{
+    from 
+    {
+        width: 0;
+    } to 
+    {
+        width: 100%;
+    }
+}
+@keyframes opacidad 
+{
+    from 
+    {
+        opacity: 0;
+    } to 
+    {
+        opacity: 1;
+    }
+}
+}
