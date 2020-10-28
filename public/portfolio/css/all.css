@@ -17068,12 +17068,6 @@ footer .fa-whatsapp {
   background-color: #4ced69;
 }
 
-footer .fa-twitter,
-footer .fa-linkedin-in,
-footer .fa-whatsapp {
-  border: solid 2px white;
-}
-
 header {
   margin: 0;
   background: linear-gradient(180deg, #222222, grey);
@@ -17131,6 +17125,18 @@ header {
       opacity: 1;
     }
 }
+}
+
+#formacion {
+  background: linear-gradient(#3a973a, #c1f0c1);
+}
+
+#habilidades {
+  background: linear-gradient(#4646da, #aae6ee);
+}
+
+#experiencia {
+  background: linear-gradient(rgba(12, 1, 1, 0.836), rgba(53, 52, 52, 0.836));
 }
 
 * {

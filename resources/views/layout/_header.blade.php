@@ -34,9 +34,6 @@
                 </h3>
                 <div class="col-12 col-md-4">   
                     <a href="" class="d-block">
-                        <i class="fas fa-user-circle text-white"> ¿Quien soy?</i>   
-                    </a>
-                    <a href="" class="d-block">
                         <i class="fas fa-code text-white mt-3 mt-md-0"> habilidades</i> 
                     </a>    
                        <a href="" class="d-block">

@@ -1,5 +1,5 @@
 <footer class="text-white">
-    <div class="py-5 d-flex flex-wrap">
+    <div class="d-flex flex-wrap py-4">
         <div class="col-12 col-md-6">
             <div>
                 <h2 class="text-uppercase text-center">
@@ -19,7 +19,7 @@
                 </div>
                <div>
                     <a href="">
-                        <i class="fab fa-whatsapp fa-2x border border-white rounded-circle p-3 text-white"></i>
+                        <i class="fab fa-whatsapp fa-2x rounded-circle p-3 text-white"></i>
                     </a>
                </div>
               
