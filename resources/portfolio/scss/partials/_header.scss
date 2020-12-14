@@ -1,38 +1,76 @@
-header 
+a:hover
 {
-    margin:0;
-    background: linear-gradient(180deg,#222222, grey);
+    text-decoration: none;
+    div
+    {
+        transition: all 0.5s linear;
+    }
+    div:hover 
+    {
+        background-color: rgb(42, 164, 180) !important;
+        border-radius: 100px !important;
+    }
+  
 }
-@media screen and (min-width:992px)
+
+.nombre-animation 
 {
-    header h1
-{
-   animation: letraXletra 1.5s 1 linear;
-   overflow: hidden;
-   white-space: nowrap;
+    animation: nombre-animation 1 2.5s linear;
+    overflow: hidden;
+    white-space: nowrap;
+    transform-origin: left;
 }
-header h6
-{
-    animation: opacidad 1.5s 1 linear 1.5s both;
-}
-@keyframes letraXletra 
+@keyframes nombre-animation 
 {
     from 
     {
         width: 0;
+        margin-left:10px;
     } to 
     {
         width: 100%;
     }
 }
-@keyframes opacidad 
+.soy-animation 
+{
+    animation: soy-animation 1 2s linear 2s both;
+    
+}
+@keyframes soy-animation
 {
     from 
     {
         opacity: 0;
+        transform: scale(0);
     } to 
     {
+        transform: scale(1.2);
         opacity: 1;
     }
 }
+.girar 
+{
+    animation: girar 3s linear;
 }
+.bg-title 
+{
+    background: linear-gradient(rgb(42, 164, 180) , rgb(52, 219, 241));
+}
+.text-title 
+{
+    color:rgb(42, 164, 180);
+}
+#animation-photo 
+{
+    background: linear-gradient(180deg,rgb(42, 164, 180) 93%,#fff);
+}
+@keyframes girar 
+{
+    from{
+        transform: rotate(0deg);
+        
+    } to{
+        transform: rotate(360deg);
+    }
+}
+

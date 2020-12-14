@@ -1,45 +1,43 @@
-<footer class="text-white">
-    <div class="d-flex flex-wrap py-4">
-        <div class="col-12 col-md-6">
-            <div>
-                <h2 class="text-uppercase text-center">
-                    redes sociales
-                </h2>
-            </div>     
-            <div class="d-flex flex-wrap justify-content-center">
-                <div class="mr-2">
-                    <a href="">
-                        <i class="fab fa-linkedin-in fa-2x rounded-circle p-3 text-white"></i>
-                    </a>
-                </div>
-                <div class="mr-2">
-                    <a href="">
-                        <i class="fab fa-twitter fa-2x rounded-circle p-3 text-white"></i>
-                    </a>
-                </div>
-               <div>
-                    <a href="">
-                        <i class="fab fa-whatsapp fa-2x rounded-circle p-3 text-white"></i>
-                    </a>
-               </div>
-              
-               
-            </div>
+@php
+    $links = [
+        [
+            'icono' =>  'fab fa-whatsapp',
+            'link' => 'https://api.whatsapp.com/send?phone=+5493415929979',
+            'color' => '#4FCE5D'
+        ],
+        [
+            'icono' =>  'fab fa-facebook-f',
+            'link' =>   'https://www.facebook.com/david.zisele/',
+            'color' => '#3B5998'
+        ],
+        [
+            'icono' =>  'fab fa-linkedin-in',
+            'link' =>   'https://www.linkedin.com/in/david-zisele-79a982168/',
+            'color' => '#0E76A8'
+        ],
+        [
+            'icono' =>  'fab fa-git',
+            'link' =>   'https://github.com/DavidLZisele',
+            'color' => '#043b6a'
+        ],
+    ]
+@endphp 
+
+<footer>
+    <div class="d-flex flex-wrap bg-title p-lg-5 align-items-center">
+        <div class="col-lg-6">
+            <h5>
+                Desarrollado por - David Zisele <i class="fas fa-code"></i>
+                <br>
+                Desarrollador Freelance
+            </h5>
         </div>
-       
-        <div class="col-12 col-md-6 text-center mt-4 mt-md-0">
-            <div>
-                <h2 class="text-uppercase">
-                    telefono
-                </h2>
-            </div>
-            
-            <div class="mt-3">
-                <i class="fas fa-mobile-alt text-white"> +54 9 3415929979 </i>
-            </div>
-            <div class="mt-3">
-                <i class="fas fa-envelope text-white"> davidzisele2016@gmail.com</i>
-            </div>
+        <div class="col-lg-6 d-flex flex-wrap">
+            @foreach ($links as $link)
+                <div class="col-3">
+                    <a target="_blank" class="btn w-100" href="{{$link['link']}}" style="background-color: {{$link['color']}}"><i class="{{$link['icono']}} p-2 my-auto text-white fa-2x"></i></a>
+                </div>
+            @endforeach
         </div>
     </div>
     

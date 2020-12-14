@@ -1,76 +1,98 @@
-<header class="text-white">
-    <div class="d-flex flex-wrap justify-content-around p-5"> 
-        <div class="col d-flex flex-wrap col-lg-6 col-xl-4 align-items-center text-center text-lg-left">
-            <div class="col d-flex flex-wrap mx-auto">
-                <div class="col-12 col-lg-3 text-center">
-                    <i class="fas fa-code rounded-circle fa-2x bg-info p-3"></i>    
-                </div>
-                <div class="col-12 col-lg-9  text-uppercase">
-                    <h1 class="mt-3 mt-lg-0 mt-xl-0">
-                        david zisele
-                    </h1>
-                    <h6 class="mt-3 mt-lg-0 mt-xl-0">
-                        programador Fullstack web
-                    </h6>
-                    <h6 class="mt-3 mt-lg-0 mt-xl-0">
-                        programador Java
-                    </h6>
-                </div> 
-            </div>
-            
-            <div class="col-12 text-center mx-auto mt-4 mt-lg-0 mt-xl-0">
-                <img src="/img/foto.jpg" alt="" class="rounded-circle">
-            </div> 
+<?php
+ $nav = [
+     [
+        'icono' => 'fas fa-user',
+        'desc' => 'Sobre mi',
+        'link' => '#sobremi'
+     ],
+     [
+        'icono' => 'fas fa-code',
+        'desc' =>  'Habilidades',
+        'link' => '#skill'
+     ],
+     [
+        'icono' => 'fas fa-user-graduate',
+        'desc' => 'Estudios',
+        'link' => '#estudios'
+     ],
+     [
+        'icono' => 'fas fa-user-tie',
+        'desc' => 'Trabajos',
+        'link' => '#trabajos'
+     ],
+];
+$datos = [
+    [
+        'icono' => 'fas fa-envelope',
+        'desc' => 'davidzisele@gmail.com',
+     ],
+     [
+        'icono' =>  'fas fa-phone',
+        'desc' => '3415929979',
+     ],
+     [
+        'icono' => 'fas fa-map-marker-alt',
+        'desc' => 'Rosario, Santa Fe',
+     ],
+     [
+        'icono' => 'fas fa-birthday-cake',
+        'desc' => '09/04/1992',
+     ]
+];
+?>
+<header class="sobremi">
+    <div class="row m-0 px-5 py-3 p-md-5 justify-content-between text-center text-lg-left">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <h3 class="bg-title text-uppercase bg-primary rounded-pill p-2 text-center">
+                NAVEGA
+            </h3>
+           <div class="p-3">
+                @foreach($nav as $n)
+                <a class="text-white" href="{{$n['link']}}">
+                   <div class="col-lg-8 mx-auto d-flex m-0 align-items-center justify-content-between mt-2">
+                       <div class="col-1">
+                            <i class="{{$n['icono']}}"></i>
+                       </div>  
+                       <h6 class="my-auto col-11 text-left">{{$n['desc']}}</h6>
+                   </div>
+                </a>
+                @endforeach
+             </div>
         </div>
-        <div class="col-12 col-lg-6 col-xl-8 mt-4 mt-lg-0 mt-xl-0">
+        <div class="col-12 col-sm-6  col-lg-4 mt-3 mt-sm-0 text-center">
+            <h3 class="bg-title text-uppercase bg-title rounded-pill p-2 text-center">
+                Yo soy
+            </h3>
             <div>
-                <h2 class="text-uppercase text-center">
-                    navega y conoceme <i class="far fa-smile-wink"></i>
-                </h2>
-            </div>
-            <div class="py-4 text-uppercase d-flex flex-wrap justify-content-between border-bottom border-top border-teal">
-                <h3 class="col-12 col-md-8">
-                   sobre mi
-                </h3>
-                <div class="col-12 col-md-4">   
-                    <a href="" class="d-block">
-                        <i class="fas fa-code text-white mt-3 mt-md-0"> habilidades</i> 
-                    </a>    
-                       <a href="" class="d-block">
-                        <i class="fas fa-award text-white mt-3 mt-md-0"> formacion</i> 
-                       </a>
-                     
+                <div class="position-relative text-center mx-auto" style="width:160px;height:160px">
+                    <div id="animation-photo"class="rounded-circle text-center mx-auto girar mt-4" style="width:160px;height:160px">
+                    
+                    </div>
+                    <div class="position-absolute rounded-circle" style=" top:6px;right:5px;">
+                            <img class="rounded-circle" src="/img/foto.jpg" alt=""  width="150px" height="150px">  
+                    </div>
                 </div>
+               
+                <h3 class="mt-3 nombre-animation mx-auto" style="letter-spacing: 5px">David Zisele</h3>
+                <h6 class="text-title soy-animation" style="letter-spacing: 3px;font-style:italic;font-weight:600">Fullstack Web</h6>
             </div>
-            <div class="py-4 text-uppercase d-flex flex-wrap justify-content-between border-bottom border-teal">
-                <h3 class="col-12 col-md-8">
-                    experiencia
-                </h3>
-                <div class="col-12 col-md-4">
-                    <a href="" class="d-block">
-                        <i class="fas fa-brain text-white mt-3 mt-md-0"> estudio rompecabezas</i>   
-                    </a>
-                    <a href="" class="d-block">
-                        <i class="fas fa-people-carry text-white mt-3 mt-md-0"> ian coworking</i> 
-                    </a>    
-                </div>
-            
-            </div>
-        
-            <div class="py-4 text-uppercase d-flex flex-wrap justify-content-between border-bottom border-teal">
-                <h3 class="col-12 col-md-8">
-                    contacto
-                </h3>
-                <div class="col-12 col-md-4">
-                    <a href="" class="d-block">
-                        <i class="fas fa-globe-americas text-white mt-3 mt-md-0"> redes sociales</i>   
-                    </a>
-                    <a href="" class="d-block">
-                        <i class="fas fa-phone-alt text-white mt-3 mt-md-0"> telefono</i> 
-                    </a>
-                </div>
-                
+        </div> 
+        <div class="col-12 col-sm-6 col-lg-4 mt-3  mt-lg-0">
+            <h3 class="bg-title text-uppercase bg-primary rounded-pill p-2 text-center">
+                Contacto
+            </h3>
+            <div class="p-3">
+                @foreach($datos as $dato)
+                   <div class="col-lg-10 col-xl-9 mx-auto d-flex m-0 align-items-center justify-content-between mt-2">
+                       <div class="col-1 ml-auto">
+                            <i class="{{$dato['icono']}}"></i>
+                       </div>  
+                       <h6 class="my-auto col-11 text-left">{{$dato['desc']}}</h6>
+                   </div>
+                @endforeach
             </div>
         </div>
+        
     </div>
+   
 </header>

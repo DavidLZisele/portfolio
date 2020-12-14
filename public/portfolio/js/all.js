@@ -37319,6 +37319,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     forceTLS: true
 // });
 
+__webpack_require__(/*! ./partials/_header */ "./resources/portfolio/js/partials/_header.js");
+
+/***/ }),
+
+/***/ "./resources/portfolio/js/partials/_header.js":
+/*!****************************************************!*\
+  !*** ./resources/portfolio/js/partials/_header.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+window.onload = function () {
+  setInterval(function () {
+    document.querySelector('#animation-photo').classList.toggle('girar');
+  }, 10000);
+};
+
 /***/ }),
 
 /***/ "./resources/portfolio/scss/app.scss":

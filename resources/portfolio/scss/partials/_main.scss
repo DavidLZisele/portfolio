@@ -12,6 +12,16 @@
     font-family: 'Nanito', sans-serif;
     max-width: 767px;
 }
+.bg-body 
+{
+    background: rgb(6,6,6);
+    background: linear-gradient(310deg, rgba(6,6,6,1) 53%, rgba(8,8,9,1) 54%, rgba(4,5,5,1) 55%);
+}
+.shadow 
+{
+    box-shadow: 3px 3px 7px 3px #fff !important;
+}
+
 
 @media screen and (min-width:768px) 
 {

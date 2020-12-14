@@ -17047,96 +17047,113 @@ readers do not read off random characters that represent icons */
   font-weight: 400;
 }
 
-footer {
-  background: linear-gradient(#006eff, rgba(115, 202, 236, 0.712));
+a:hover {
+  text-decoration: none;
 }
 
-footer .fa-mobile-alt,
-footer .fa-envelope {
-  font-size: 1.2em;
+a:hover div {
+  transition: all 0.5s linear;
 }
 
-footer .fa-linkedin-in {
-  background-color: #0e76a8;
+a:hover div:hover {
+  background-color: #2aa4b4 !important;
+  border-radius: 100px !important;
 }
 
-footer .fa-twitter {
-  background-color: #00acee;
+.nombre-animation {
+  -webkit-animation: nombre-animation 1 2.5s linear;
+          animation: nombre-animation 1 2.5s linear;
+  overflow: hidden;
+  white-space: nowrap;
+  transform-origin: left;
 }
 
-footer .fa-whatsapp {
-  background-color: #4ced69;
-}
-
-header {
-  margin: 0;
-  background: linear-gradient(180deg, #222222, grey);
-}
-
-@media screen and (min-width: 992px) {
-  header h1 {
-    -webkit-animation: letraXletra 1.5s 1 linear;
-            animation: letraXletra 1.5s 1 linear;
-    overflow: hidden;
-    white-space: nowrap;
+@-webkit-keyframes nombre-animation {
+  from {
+    width: 0;
+    margin-left: 10px;
   }
 
-  header h6 {
-    -webkit-animation: opacidad 1.5s 1 linear 1.5s both;
-            animation: opacidad 1.5s 1 linear 1.5s both;
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes nombre-animation {
+  from {
+    width: 0;
+    margin-left: 10px;
   }
 
-@-webkit-keyframes letraXletra {
-    from {
-      width: 0;
-    }
-
-    to {
-      width: 100%;
-    }
+  to {
+    width: 100%;
+  }
 }
 
-@keyframes letraXletra {
-    from {
-      width: 0;
-    }
-
-    to {
-      width: 100%;
-    }
+.soy-animation {
+  -webkit-animation: soy-animation 1 2s linear 2s both;
+          animation: soy-animation 1 2s linear 2s both;
 }
 
-@-webkit-keyframes opacidad {
-    from {
-      opacity: 0;
-    }
+@-webkit-keyframes soy-animation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
 
-    to {
-      opacity: 1;
-    }
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
-@keyframes opacidad {
-    from {
-      opacity: 0;
-    }
+@keyframes soy-animation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
 
-    to {
-      opacity: 1;
-    }
-}
-}
-
-#formacion {
-  background: linear-gradient(#3a973a, #c1f0c1);
+  to {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
-#habilidades {
-  background: linear-gradient(#4646da, #aae6ee);
+.girar {
+  -webkit-animation: girar 3s linear;
+          animation: girar 3s linear;
 }
 
-#experiencia {
-  background: linear-gradient(rgba(12, 1, 1, 0.836), rgba(53, 52, 52, 0.836));
+.bg-title {
+  background: linear-gradient(#2aa4b4, #34dbf1);
+}
+
+.text-title {
+  color: #2aa4b4;
+}
+
+#animation-photo {
+  background: linear-gradient(180deg, #2aa4b4 93%, #fff);
+}
+
+@-webkit-keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 * {
@@ -17154,6 +17171,15 @@ header {
   margin: 0 auto;
   font-family: "Nanito", sans-serif;
   max-width: 767px;
+}
+
+.bg-body {
+  background: #060606;
+  background: linear-gradient(310deg, #060606 53%, #080809 54%, #040505 55%);
+}
+
+.shadow {
+  box-shadow: 3px 3px 7px 3px #fff !important;
 }
 
 @media screen and (min-width: 768px) {
